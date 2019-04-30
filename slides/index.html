@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Continuous Delivery like you know no fear</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+					<script type="text/template">
+						# Continuous Delivery
+						## like you know no fear 😱
+
+						---
+
+						<!-- .slide: style="color:white" -->
+						<!-- .slide: data-background-image="media/runway.png" -->
+						<!-- .slide: data-background-position=center -->
+						<!-- .slide: data-background-size=100%-->
+
+						# The Runway Metaphor
+
+						--
+
+						<!-- .slide: style="color:white" -->
+						<!-- .slide: data-background-video="media/bikes.mp4" -->
+						<!-- .slide: data-background-position=center -->
+						<!-- .slide: data-background-size=100%-->
+						<!-- .slide: data-background-video-loop="loop"-->
+						<!-- .slide: data-background-video-muted="muted"-->
+
+						# The Downhill Metaphor
+
+						--
+
+						# Adjust quickly is a _very_ important business requirement
+
+						--
+
+						## big risks
+
+						* building the wrong product
+						* being too slow
+
+						It's our duty as software professionals to get ideas out there as fast as possible*
+
+						--
+
+						<!-- .slide: style="color:white" -->
+						<!-- .slide: data-background-image="media/feedback1.png" -->
+						<!-- .slide: data-background-position=center -->
+						<!-- .slide: data-background-size=100%-->
+
+						--
+
+
+						<!-- .slide: style="color:white" -->
+						<!-- .slide: data-background-image="media/feedback2.png" -->
+						<!-- .slide: data-background-position=center -->
+						<!-- .slide: data-background-size=100%-->
+
+						--
+
+						## What means done?
+
+						* to you
+						<!-- .element: class="fragment" -->
+						* to your PO
+						<!-- .element: class="fragment" -->
+						* to your CEO
+						<!-- .element: class="fragment" -->
+						* to your Customer
+						<!-- .element: class="fragment" -->
+
+						--
+
+						> Done means live and available to the customer, everything else is just an excuse
+
+						_Me, for the lack of a better definition_
+
+
+
+					</script>
+				</section>
+
+				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+					<script type="text/template">
+						## What is continuous
+
+						* -integration
+						* -delivery
+						* -deployment
+
+						--
+
+						<!-- .slide: style="color:white" -->
+						<!-- .slide: data-background-image="media/cd1.png" -->
+						<!-- .slide: data-background-position=center -->
+						<!-- .slide: data-background-size=100%-->
+
+						--
+
+						<!-- .slide: style="color:white" -->
+						<!-- .slide: data-background-image="media/cd2.png" -->
+						<!-- .slide: data-background-position=center -->
+						<!-- .slide: data-background-size=100%-->
+
+						--
+
+						<!-- .slide: style="color:white" -->
+						<!-- .slide: data-background-image="media/cd3.png" -->
+						<!-- .slide: data-background-position=center -->
+						<!-- .slide: data-background-size=100%-->
+
+						--
+
+						## We deploy on Fridays
+
+						Any not-deploying rule is a synonym for lack of tests, lack of trust or lack of feedback
+
+						--
+
+						## What to optimize for
+
+						MTBF vs. MTTR
+
+						--
+
+						## Errors happen. So do bugs.
+
+						That's when you need a tested, trained and automated way to release your fixes
+
+						<!-- .slide: style="color:black" -->
+						<!-- .slide: data-background-image="media/burn.png" -->
+						<!-- .slide: data-background-position=center -->
+						<!-- .slide: data-background-size=100%-->
+
+
+						--
+
+						## Delivery Performance
+
+						| |Elite|High|Mid|Low|
+						|--|--|--|--|--|
+						|Freq|> 1/h|1/h - 1/d|1/w - 1/m|1/w - 1/m|
+						|Lead Time|< 1h|1d - 1w|1w - 1m|1m - 6m|
+						|MTTR|<1h|<1d|<1d|1w - 1m|
+						|CFR|0-15%|0-15%|0-15%|46-60%|
+
+
+						[DORA State of DevOps Report 2018 p14]
+
+						--
+
+						## Time Spent
+
+						| |Elite|High|Mid|Low|
+						|--|--|--|--|--|
+						|new work|50%|50%|40%|30%|
+						|rework|19,5%|20%|20%|20%|
+						|security|5%|5%|5%|10%|
+						|defects|10%|10%|10%|20%|
+						|support|5%|10%|10%|15%|
+
+						[DORA State of DevOps Report 2018 p32]
+					</script>
+				</section>
+
+				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+					<script type="text/template">
+						## DEMO
+					</script>
+				</section>
+
+				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+					<script type="text/template">
+					## The Matmatch Path to CD
+
+					1. Fix deploy automation (1 command)
+					<!-- .element: class="fragment" -->
+					1. Fix Testing
+					<!-- .element: class="fragment" -->
+					1. Fix Review Process
+					<!-- .element: class="fragment" -->
+					1. Fix Observability
+					<!-- .element: class="fragment" -->
+					1. Fix Fear
+					<!-- .element: class="fragment" -->
+
+					--
+
+					## Getting there
+
+					```
+						make deploy production
+					```
+
+					--
+
+					## Getting there
+
+					### Fix Testing
+
+					separate our tests into different build steps for quicker feedback
+
+					--
+
+					## Getting there
+
+					### Fix Testing
+
+					speed up the build -> build on big ec2 spot instances
+
+					(we went from TravisCI over AWS CodeBuild to Gitlab Runners)
+
+					--
+
+					## Getting there
+
+					### Fix the review process
+
+					<img src="media/review.png" height="450">
+
+					--
+
+					</script>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
