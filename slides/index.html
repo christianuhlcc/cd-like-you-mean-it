@@ -89,7 +89,7 @@
 						<!-- .element: class="fragment" -->
 						* to your CEO
 						<!-- .element: class="fragment" -->
-						* to your Customer
+						* to your customer
 						<!-- .element: class="fragment" -->
 
 						--
@@ -136,7 +136,7 @@
 
 						## We deploy on Fridays
 
-						Any not-deploying rule is a synonym for lack of tests, lack of trust or lack of feedback
+						Any do-not-deploy rule is a synonym for lack of tests, lack of trust or lack of feedback
 
 						--
 
@@ -196,8 +196,12 @@
 					<script type="text/template">
 					## The Matmatch Path to CD
 
-					1. Fix deploy automation (1 command)
-					<!-- .element: class="fragment" -->
+					--
+
+
+					## The Matmatch Path to CD
+
+					1. Fix Deployment Automation
 					1. Fix Testing
 					<!-- .element: class="fragment" -->
 					1. Fix Review Process
@@ -223,7 +227,7 @@
 
 					### Fix Testing
 
-					separate our tests into different build steps for quicker feedback
+					Separate our tests into different build steps for quicker feedback
 
 					<img src="media/pyramid.png" height="300">
 
@@ -233,9 +237,9 @@
 
 					### Fix Testing
 
-					speed up the build -> build on big ec2 spot instances
+					Speed up the build -> Build on big ec2 spot instances
 
-					(we went from TravisCI over AWS CodeBuild to Gitlab Runners)
+					(We went from TravisCI over AWS CodeBuild to Gitlab Runners)
 
 					--
 
@@ -261,7 +265,7 @@
 
 					### Observability of the System
 
-					get good metrics and feed them into good tools
+					Get good metrics and feed them into good tools
 
 					<img src="media/dash1.png"  width="300">
 					<img src="media/datadog.png" width="300">
@@ -273,9 +277,9 @@
 
 					### Cops of the Day
 
-					Increase operational knowledge in the Team:
+					Increase operational knowledge in the team:
 
-					random pair of developers run the "morning checklist"
+					Random pair of developers run the "morning checklist"
 
 					--
 
@@ -283,7 +287,7 @@
 
 					### Chatops
 
-					be involved in the system behavior - convert important business events to chat messages
+					Be involved in the system behavior - convert important business events to chat messages
 
 					<img src="media/chatops.png"  width="350">
 
@@ -299,7 +303,7 @@
 
 					### Rolling Releases
 
-					<img src="media/rolling-release.png"  width="450">
+					<img src="media/rolling-release.png"  width="550">
 
 					--
 
@@ -315,7 +319,7 @@
 
 					### Rights based Releases
 
-					<img src="media/right-based-releases.png"  width="450">
+					<img src="media/right-based-releases.png"  width="700">
 
 					--
 
@@ -331,11 +335,11 @@
 
 					### Limit Fear: Make it Boring
 
-					1. Automate everything until the "Deploy" Button (Continuous Delivery)
+					1. Automate everything until the "Deploy" button (Continuous Delivery)
 					<!-- .element: class="fragment" -->
-					2. Make pushing the Button a boring non-event
+					2. Make pushing the button a boring non-event
 					<!-- .element: class="fragment" -->
-					3. Remove the Button, no one cares
+					3. Remove the button, no one cares
 					<!-- .element: class="fragment" -->
 
 					</script>
@@ -347,21 +351,22 @@
 					<script type="text/template">
 						## Issues we faced
 
-						* K8S: Health and Readiness Endpoints
-						<!-- .element: class="fragment" -->
-						* K8S: Pod Limits
-						<!-- .element: class="fragment" -->
-						* K8S Overload - Rebuild everything from scratch
-						<!-- .element: class="fragment" -->
-						* Dependencies between Services (Stateful Set by Accident)
-						<!-- .element: class="fragment" -->
-
-						=> Architectural and Ops Problems bite you twice as fast
-						<!-- .element: class="fragment" -->
-						=> But you notice them before it hits production
-						<!-- .element: class="fragment" -->
-
 						--
+
+						## Issues we faced
+
+						* K8S: Health and readiness endpoints
+						* K8S: Pod limits
+						<!-- .element: class="fragment" -->
+						* K8S overload: Rebuild everything from scratch
+						<!-- .element: class="fragment" -->
+						* Dependencies between services (stateful set by accident)
+						<!-- .element: class="fragment" -->
+
+						=> Architectural and ops problems bite you twice as fast
+						<!-- .element: class="fragment" -->
+						=> But you notice them before they hit production
+						<!-- .element: class="fragment" -->
 
 
 					</script>
@@ -377,21 +382,21 @@
 						* We have less defects and issues than before
 						* We have a ❤️ for production
 
-						5,25 Humans => up to 15 Releases / Day 🔥
+						5,25 humans => up to 15 releases / day 🔥
 
 						--
 
 						## Key Takeaways
 
-						* CD pays off big time
+						* Continuous Deployment pays off big time
 						<!-- .element: class="fragment" -->
 						* Slow and steady wins the race to get there
 						<!-- .element: class="fragment" -->
 						* It's not just tech, it's also emotions
 						<!-- .element: class="fragment" -->
-						* Don't play too much with your K8S Prod Cluster
+						* Don't play too much with your K8S prod cluster
 						<!-- .element: class="fragment" -->
-						* Most things you have to fix for CD are things help you a lot in general
+						* Most things you have to fix for CD are things that help you a lot in general
 						<!-- .element: class="fragment" -->
 
 						--
