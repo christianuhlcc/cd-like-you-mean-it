@@ -204,6 +204,8 @@
 					<!-- .element: class="fragment" -->
 					1. Fix Observability
 					<!-- .element: class="fragment" -->
+					1. Fix Release Process
+					<!-- .element: class="fragment" -->
 					1. Fix Fear
 					<!-- .element: class="fragment" -->
 
@@ -223,6 +225,8 @@
 
 					separate our tests into different build steps for quicker feedback
 
+					<img src="media/pyramid.png" height="300">
+
 					--
 
 					## Getting there
@@ -239,10 +243,174 @@
 
 					### Fix the review process
 
-					<img src="media/review.png" height="450">
+					<img src="media/review.png" height="300">
 
 					--
 
+					## Getting there
+
+					### Fix our Environment
+
+					Dependable releases need dependable infrastructure
+
+					<img src="media/cables.jpg" height="300">
+
+					--
+
+					## Getting there
+
+					### Observability of the System
+
+					get good metrics and feed them into good tools
+
+					<img src="media/dash1.png"  width="300">
+					<img src="media/datadog.png" width="300">
+					<img src="media/opsgenie.jpg" height="300">
+
+					--
+
+					## Getting there
+
+					### Cops of the Day
+
+					Increase operational knowledge in the Team:
+
+					random pair of developers run the "morning checklist"
+
+					--
+
+					## Getting there
+
+					### Chatops
+
+					be involved in the system behavior - convert important business events to chat messages
+
+					<img src="media/chatops.png"  width="350">
+
+					--
+
+					## Getting there
+
+					### Fix Release Process
+
+					--
+
+					## Getting there
+
+					### Rolling Releases
+
+					<img src="media/rolling-release.png"  width="450">
+
+					--
+
+					## Getting there
+
+					### Dark Releases
+
+					<img src="media/dark-release.png"  width="450">
+
+					--
+
+					## Getting there
+
+					### Rights based Releases
+
+					<img src="media/right-based-releases.png"  width="450">
+
+					--
+
+					## Getting there
+
+					### Limit Fear: Small Releases
+
+					<img src="media/small-release.png"  width="450">
+
+					--
+
+					## Getting there
+
+					### Limit Fear: Make it Boring
+
+					1. Automate everything until the "Deploy" Button (Continous Delivery)
+					<!-- .element: class="fragment" -->
+					2. Make pushing the Button a boring non-event
+					<!-- .element: class="fragment" -->
+					3. Remove the Button, no one cares
+					<!-- .element: class="fragment" -->
+
+					</script>
+				</section>
+
+
+
+				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+					<script type="text/template">
+						## Issues we faced
+
+						* K8S: Health and Readiness Endpoints
+						<!-- .element: class="fragment" -->
+						* K8S: Pod Limits
+						<!-- .element: class="fragment" -->
+						* K8S Overload - Rebuild everything from scratch
+						<!-- .element: class="fragment" -->
+						* Dependencies between Services (Stateful Set by Accident)
+						<!-- .element: class="fragment" -->
+
+						=> Architectural and Ops Problems bite you twice as fast
+						<!-- .element: class="fragment" -->
+						=> But you notice them before it hits production
+						<!-- .element: class="fragment" -->
+
+						--
+
+
+					</script>
+				</section>
+
+
+
+				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+					<script type="text/template">
+						## Summary
+
+						* We are faster than before
+						* We have less defects and issues than before
+						* We have a ❤️ for production
+
+						5,25 Humans => up to 15 Releases / Day 🔥
+
+						--
+
+						## Key Takeaways
+
+						* CD pays off big time
+						<!-- .element: class="fragment" -->
+						* Slow and steady wins the race to get there
+						<!-- .element: class="fragment" -->
+						* It's not just tech, it's also emotions
+						<!-- .element: class="fragment" -->
+						* Don't play too much with your K8S Prod Cluster
+						<!-- .element: class="fragment" -->
+						* Most things you have to fix for CD are things help you a lot in general
+						<!-- .element: class="fragment" -->
+
+						--
+
+						## Suggested Readings
+
+						* [Continuous Delivery, Jez Humble](https://www.amazon.de/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/)
+						* [Accelerate, Nicole Forsgren Phd ](https://www.amazon.de/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339/)
+						* [Release It, Michael Nygard ](https://www.amazon.de/Release-Design-Deploy-Production-Ready-Software/dp/1680502395/)
+						* [The Phoenix Project, Gene Kim](https://www.amazon.de/Phoenix-Project-DevOps-Helping-Business/dp/1942788290/)
+
+
+						--
+
+						## Questions?
+
+						My twitter is [@chrisuhl](https://twitter.com/chrisuhl)
+
+						Examples, slides and everything else [on github: https://github.com/christianuhlcc/cd-like-you-mean-it](https://github.com/christianuhlcc/cd-like-you-mean-it)
 					</script>
 				</section>
 			</div>
