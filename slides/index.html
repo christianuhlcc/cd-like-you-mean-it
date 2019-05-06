@@ -153,7 +153,10 @@
 
 						## What to optimize for
 
-						MTBF vs. MTTR
+						### MTBF vs. MTTR
+
+
+						Mean Time Between Failure _vs_ Mean Time To Recovery
 
 						--
 
@@ -366,18 +369,38 @@
 
 						## Issues we faced
 
+						* learning helm was more effort than we thought
 						* K8S: Health and readiness endpoints
+						<!-- .element: class="fragment" -->
 						* K8S: Pod limits
 						<!-- .element: class="fragment" -->
 						* K8S overload: Rebuild everything from scratch
 						<!-- .element: class="fragment" -->
-						* Dependencies between services (stateful set by accident)
+						* there are no multi-level-wildcard certificates
+						<!-- .element: class="fragment" -->
+						* dependencies between services (stateful set by accident)
+						<!-- .element: class="fragment" -->
+						* fixing logic in a lot of places (gitlab-ci, helm charts)
 						<!-- .element: class="fragment" -->
 
-						=> Architectural and ops problems bite you twice as fast
+						--
+
+						## Issues we faced (Summary)
+
+						* Architectural and ops problems bite you twice as fast
 						<!-- .element: class="fragment" -->
-						=> But you notice them before they hit production
+						* But you notice them before they hit production
 						<!-- .element: class="fragment" -->
+						* The rest just needs to be worked off piece by piece
+						<!-- .element: class="fragment" -->
+
+						--
+
+						## Ongoing Issues
+
+						* duplicated code in gitlab-ci.yml files
+						* duplicated code in helm charts
+						* deployments fail to clean up every once in a blue moon
 
 
 					</script>
