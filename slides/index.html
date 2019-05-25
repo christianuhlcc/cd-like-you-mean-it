@@ -23,7 +23,25 @@
 		</script>
 	</head>
 	<body>
-		<div class="reveal">
+
+	<style type="text/css">
+		/* 1. Style header/footer <div> so they are positioned as desired. */
+		#footer-left {
+			position: absolute;
+			bottom: 1%;
+			left: 1%;
+		}
+	</style>
+
+	<!-- 2. Create hidden header/footer <div> -->
+	<div id="hidden" style="display:none;">
+		<div id="header">
+
+			<div id="footer-left"><img src="media/twitter.png" height="32">&nbsp;@chrisuhl</div>
+		</div>
+	</div>
+
+	<div class="reveal">
 			<div class="slides">
 
 				<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
@@ -271,6 +289,14 @@
 
 					## Getting there
 
+					### Fix the review process
+
+					Demo to the company what you did. It's so easy to lose track of what you released
+
+					--
+
+					## Getting there
+
 					### Fix our Environment
 
 					Dependable releases need dependable infrastructure
@@ -284,6 +310,8 @@
 					### Observability of the System
 
 					Get good metrics and feed them into good tools
+
+					Elastic Stack - Datadog - Opsgenie
 
 					<img src="media/dash1.png"  width="300">
 					<img src="media/datadog.png" width="300">
@@ -327,11 +355,22 @@
 
 					## Getting there
 
-					### Dark Releases
+					### Shadow Releases
 
 					<img src="media/dark-release.png"  width="450">
 
 					--
+
+					## Getting there (for completeness)
+
+					### Canary Releases
+
+					We don't to this yet, but looking forward to it
+
+					<img src="media/rolling-release.png"  width="450">
+
+					--
+
 
 					## Getting there
 
@@ -476,5 +515,19 @@ w
 				]
 			});
 		</script>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript">
+		// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+		var header = $('#header').html();
+		if ( window.location.search.match( /print-pdf/gi ) ) {
+			Reveal.addEventListener( 'ready', function( event ) {
+				$('.slide-background').append(header);
+			});
+		}
+		else {
+			$('div.reveal').append(header);
+		}
+	</script>
 	</body>
 </html>
